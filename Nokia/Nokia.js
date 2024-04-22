@@ -156,6 +156,16 @@ function securitySettings() {
         "6. Change access codes")
 }
 
+function clockMenu() {
+    console.log("CLOCK MENU")
+    console.log("1. Alarm clock\n" +
+        "2. Clock settings\n" +
+        "3. Date settings\n" +
+        "4. Stopwatch\n" +
+        "5. Countdown timer\n" +
+        "6. Auto update of date and time\n")
+}
+
 function main(){
     displayMenu()
     let choice = prompt("Select an option, 0 to exit: ")
@@ -495,6 +505,42 @@ function main(){
             break;
         case '10':
             console.log("Reminders")
+            break;
+        case '11':
+            clockMenu()
+            let clockChoice = prompt("Select an option, 0 to go back to main: ")
+            switch (clockChoice){
+                case '1':
+                    console.log("Set alarm clock")
+                    break;
+                case '2':
+                    console.log("Set phone clock")
+                    break;
+                case '3':
+                    console.log("Set phone date")
+                    break;
+                case '4':
+                    console.log("Start stopwatch")
+                    break;
+                case '5':
+                    console.log("Start countdown timer")
+                    break;
+                case '6':
+                    console.log("Date and time auto updated")
+                    break;
+                case '0':
+                    displayMenu();
+                    break;
+                default:
+                    console.log("Invalid")
+                    clockMenu()
+            }
+            break;
+        case '12':
+            console.log("PROFILES")
+            break;
+        case '13':
+            console.log("SIM SERVICES")
             break;
         case '0':
             process.exit(69)
