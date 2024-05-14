@@ -41,8 +41,48 @@ function highestProduct(numbers) {
         return product;
     }
 
-function arrangeZeroAtTheEnd(numbers){
-    
+function addOneToLastIndex(numbers){
+    for(let index = numbers.length-1; index >= 0; index--){
+        if (numbers[index]>=9){
+            numbers[index]= 0
+        } else {
+            numbers[index] = numbers[index] + 1
+            break
+        }
+    }
+    if(numbers[0] === 0) numbers.unshift(1)
+
+
+    return numbers
 }
 
-module.exports = {addNumbers, evenNumbers, studentGrades, highestProduct};
+function highestOccurringNumber(numbers) {
+    let countMap = {};
+    let maxCount = 0;
+    let maxElement = numbers[0];
+
+    numbers.forEach(element => {
+        countMap[element] = (countMap[element] || 0) + 1;
+        if (countMap[element] > maxCount) {
+            maxCount = countMap[element];
+            maxElement = element;
+        }
+    });
+    return maxElement;
+
+    function numberOfOccurringTimes(numbers) {
+        let result = {}
+        for (let count1 = 0; count < numbers.length; count1++) {
+            var count = 0;
+            for (let count2 = 0; count2 < numbers.length; count2++) {
+                if (numbers[count1] === numbers[count2]) count++;
+            }
+            result[numbers[count1]] = count;
+        }
+
+        return result;
+    }
+}
+
+
+module.exports = {addNumbers, evenNumbers, studentGrades, highestProduct, addOneToLastIndex, numberOfOccurringTimes, highestOccurringNumber: highestOccurringNumber};

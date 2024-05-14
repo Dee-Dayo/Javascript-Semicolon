@@ -33,8 +33,7 @@ function phoneBookMenu() {
 
 function phonebookOptionMenu() {
     console.log("Phonebook Options")
-    console.log("1. Type of View\n" +
-        "2. Memory Status\n")
+    console.log("1. Type of View\n2. Memory Status\n")
 }
 
 function messageMenu() {
@@ -53,8 +52,7 @@ function messageMenu() {
 
 function messageSettingsMenu() {
     console.log("Message Settings")
-    console.log("1. Set\n" +
-        "2. Common\n")
+    console.log("1. Set\n2. Common\n")
 }
 
 function messageSettingsSetMenu() {
@@ -101,8 +99,7 @@ function callCostMenu() {
 
 function callCostSettingsMenu() {
     console.log("Call Register >> Call Cost Settings")
-    console.log("1. Call cosot limit\n" +
-        "2. Show costs in\n")
+    console.log("1. Call cosot limit\n2. Show costs in\n")
 }
 
 function tonesMenu() {
@@ -177,7 +174,7 @@ function main(){
             let phonebookChoice = prompt("Select an option, 0 to go back to main")
             switch (phonebookChoice){
                 case '1':
-                    console.log("Search Phonebook")
+                    console.log("Search phonebook")
                     break;
                 case '2':
                     console.log("Service Nos")
